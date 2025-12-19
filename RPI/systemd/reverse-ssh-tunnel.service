@@ -1,0 +1,23 @@
+[Unit]
+Description=Reverse SSH Tunnel (autossh)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=pi
+Environment="AUTOSSH_GATETIME=0"
+# ---- replace REMOTE_USER and REMOTE_PORT (2222) below as needed ----
+ExecStart=/usr/bin/autossh -M 0 -N \
+  -o "ServerAliveInterval 30" \
+  -o "ServerAliveCountMax 3" \
+  -o "ExitOnForwardFailure=yes" \
+  -i /home/pi/.ssh/id_rsa_autossh \
+  -R 2222:localhost:22 root@5.199.162.250
+Restart=always
+RestartSec=5
+# Keep logs in journal
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
