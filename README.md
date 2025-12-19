@@ -59,4 +59,19 @@ The final project for "Internet of Things 52104S-3006" course at University of O
 ## Pico Configuration:
 * Setup MicroPython on Raspberry Pi Pico W
 * create main.py and use the given main.py script
-
+## Hardware setup:
+* on Raspberry Pi Pico W use these pins:
+  * Pin 4 -> HC_SR04 echo
+  * Pin 5 -> HC_SR04 Trig
+  * Pin 40 -> HC_SR04 Vcc
+  * Pin 38 ->  HC_SR04 GND
+  * Pin 36 ->  BMP 280 Vcc
+  * Pin 33 -> BMP 280 GND
+  * Pin 27 -> BMP 280 Scl
+  * Pin 27 -> BMP 280 SdA
+  * Pin 38 ->  magnetic switch
+  * Pin 19 ->  magnetic switch
+  * use A, B ,G pins for connecting to Pin number 1,2 ,5 in DB9 cable accordingly
+* on Raspberry Pi 3 use these pins:
+   * Pin 6 -> DB9 pin 5
+   * Pin 13 and 9 -> to LED and resistors in series
