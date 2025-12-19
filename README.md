@@ -91,4 +91,9 @@ For this project Ubuntu 22 was installed in the private server
   * `./hivemq-ce-2024.9/bin/run.sh`
   * To make this .sh run in background, make a systemd service:
   * ` sudo nano /etc/systemd/system/hivemq.service`
+  * Use given **hivemq.service** configuration
+  * `sudo systemctl daemon-reload`
+  * `sudo systemctl enable hivemq.service`
+  * `sudo systemctl start hivemq.service`
+  
     
