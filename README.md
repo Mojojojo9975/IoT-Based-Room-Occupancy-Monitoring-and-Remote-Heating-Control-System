@@ -95,5 +95,9 @@ For this project Ubuntu 22 was installed in the private server
   * `sudo systemctl daemon-reload`
   * `sudo systemctl enable hivemq.service`
   * `sudo systemctl start hivemq.service`
-  
-    
+
+## Tests for Evaluating maximum throughput:
+ * For checking the maximum throughput over RS-485 link you can use test.py file located in Pico/Test and also use test.vi in RPI/test
+ * For checking the maximum throughput over Wi-Fi with UDP tranmission, you can use test2.py file located in Pico/Test and also use test2.vi in RPI/test
+  * Change SSID, PASSWORD according to your Wi-Fi configuration
+  * change UDP_TARGET_IP based on your Raspbery Pi 3 IP adderess you can check it with `ifconfig`
